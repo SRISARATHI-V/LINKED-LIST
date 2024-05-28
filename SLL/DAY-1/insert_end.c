@@ -8,7 +8,7 @@ struct node *link;
 
 };
 
-//adding an element at the end
+
 void add(struct node *head,int data)
 {
     struct node *ptr,*temp;
