@@ -21,7 +21,7 @@ int main(){
   ptr=head;
   while(ptr!=null){
      printf("%d",ptr->data);
-     ptr=ptr->next;
+     ptr=ptr->link;
   }
   return 0;
 }
