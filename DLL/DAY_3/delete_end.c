@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stdlb.h>
+#include<stdlib.h>
 
 struct node{
   struct node *prev;
