@@ -4,43 +4,44 @@
 struct node{
   int data;
   struct node *link;
+void delete_end(struct node *head);
 };
 int main(){
   struct node *head = malloc(sizeof(struct node));
   head->data=10;
-  head->link=null;
+  head->link=NULL;
 
   struct node *current = malloc(sizeof(struct node));
   current->data=20;
-  current->link=null;
+  current->link=NULL;
   head->link=current;
 
   current = malloc(sizeof(struct node));
   current->data=30;
-  current->link=null;
+  current->link=NULL;
   head->link->link=current;
 
   delete_end(head);
   ptr=head;
-  while(ptr!=null){
+  while(ptr!=NULL){
       printf("%d",ptr->data);
       ptr=ptr->link;
   }
   return 0;
 }
 void delete_end(struct node *head){
-  if(head==null){
+  if(head==NULL){
      printf("list is empty");
-  }else if(head->link=null){
+  }else if(head->link=NULL){
      free(head);
-     head=null;
+     head=NULL;
   }else{
      struct node *temp=head;
-     while(temp->link->link!=null){
+     while(temp->link->link!=NULL){
        temp=temp->link;
      }
      free(temp->link);
-     temp->link=null;
+     temp->link=NULL;
   }
 }
   
