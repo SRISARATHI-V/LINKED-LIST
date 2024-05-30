@@ -42,4 +42,40 @@ struct node* insert_end(struct node* head,int data){
    return head;
 }
 struct node* add_pos(struct node* head,int data,int pos){
-  
+  struct node* newp=NULL;
+  struct node* temp=head;
+  struct node* temp2=NULL;
+  newp=create(newp,data);
+  while(position!=1){
+    temp=temp->next;
+    position--;
+  }
+  if(temp->next==NULL){
+    temp->next=newp;
+    newp->prev=temp;
+  }else{
+    temp2=temp->next;
+    temp->next=newp;
+    temp2->prev=newp;
+    newp->next=temp2;
+    newp->prev=temp;
+  }
+  return head;
+}
+
+int main(){
+  struct node* head=NULL;
+  struct node* ptr;
+  int position=2;
+  head=create(head,10);
+  head=insert_beg(head,20);
+  head=insert_end(head,30);
+  head=add_pos(head,40,position);
+  ptr=head;
+  while(ptr!=NULL){
+   printf("%d",ptr->data);
+   ptr=ptr->next;
+  }
+  return 0;
+}
+
