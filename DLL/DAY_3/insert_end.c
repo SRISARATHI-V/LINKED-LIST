@@ -31,12 +31,16 @@ struct node* create(struct node* head, int data){
   return head;
 }
 struct node* insert_end(struct node* head,int data){
-   struct node* temp1=malloc(sizeof(struct node));
+   struct node* temp,*tp;
+   temp=malloc(sizeof(struct node));
    temp1->prev=NULL;
    temp1->data=data;
    temp1->next=NULL;
-   head->next=temp1;
-   temp1->prev=head;
-  
+   tp=head;
+   while(tp->next!=NULL){
+       tp=tp->next;
+   }
+   tp->next=temp;
+   temp->Prev=tp;
    return head;
 }
