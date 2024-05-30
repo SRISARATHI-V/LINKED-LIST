@@ -20,7 +20,7 @@ int main(){
   return 0;
 }
 
-struct node* create(struct node* head,int data){
+struct node* create(struct node* head, int data){
   struct node* temp=malloc(sizeof(struct node));
   temp->prev=NULL;
   temp->data=data;
