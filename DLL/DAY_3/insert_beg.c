@@ -16,7 +16,7 @@ int main(){
   head=insert_beg(head,20);
   ptr=head;
   while(ptr!=NULL){
-    printf("%d",head->data);
+    printf("%d",ptr->data);
     ptr=ptr->next;
   } 
   return 0;
