@@ -26,7 +26,7 @@ struct node* insert_end(struct node* head,int data){
        tp=tp->next;
    }
    tp->next=temp;
-   temp->Prev=tp;
+   temp->prev=tp;
    return head;
 }
 struct node* del_beg(struct node* head){
@@ -46,8 +46,8 @@ int main(){
   head=create(head,10);
   head=insert_end(head,20);
   head=insert_end(head,30);
-  printf("before deletion:%d",head);
+  printf("%d",head);
   head=del_beg(head);
-  printf("after deletion;%d",head);
+  printf("%d",head);
   return head;
 }
