@@ -5,25 +5,28 @@ struct node{
   int data;
   struct node *link;
 };
+void delete_pos(struct node **head,int position);
+
 int main(){
   struct node *head = malloc(sizeof(struct node));
   head->data=10;
-  head->link=null;
+  head->link=NULL;
 
   struct node *current = malloc(sizeof(struct node));
   current->data=20;
-  current->link=null;
+  current->link=NULL;
   head->link=current;
 
   current = malloc(sizeof(struct node));
   current->data=30;
-  current->link=null;
+  current->link=NULL;
   head->link->link=current;
   int position=2;
 
-  delete_pos(&head,pos);
+  delete_pos(&head,position);
+  struct node *ptr;
   ptr=head;
-  while(ptr!=null){
+  while(ptr!=NULL){
       printf("%d",ptr->data);
       ptr=ptr->link;
   }
@@ -33,12 +36,12 @@ int main(){
 void delete_pos(struct node **head,int position){
    struct node *current=*head;
    struct node *previous=*head;
-   if (*head=null){
+   if (*head=NULL){
      printf("list is empty");
    }else if(position ==1){
      *head=current->link;
       free(current);
-      current=null;
+      current=NULL;
    }else{
       while(position!=1){
          previous=current;
@@ -47,7 +50,7 @@ void delete_pos(struct node **head,int position){
       }
       previous->link=current->link;
       free(current);
-      current=null;
+      current=NULL;
    }
 }
 
