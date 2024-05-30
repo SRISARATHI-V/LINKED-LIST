@@ -5,6 +5,7 @@ struct node{
   int data;
   struct node *link;
 };
+struct node* insert_beg(struct node* head,int d);
 
 int main(){
   struct node *head=malloc(sizeof(struct node));
