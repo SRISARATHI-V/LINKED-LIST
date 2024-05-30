@@ -14,4 +14,13 @@ struct node* create(struct node* head,int data){
   head=temp;
   return head;
 }
-
+struct node* insert_beg(struct node* head,int data){
+   struct node* temp1=malloc(sizeof(struct node));
+   temp1->prev=NULL;
+   temp1->data=data;
+   temp1->next=NULL;
+   temp1->next=head;
+   head->prev=temp1;
+   head=temp1;
+   return head;
+}
