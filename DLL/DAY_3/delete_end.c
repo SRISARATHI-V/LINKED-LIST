@@ -48,8 +48,6 @@ int main(){
   head=create(head,10);
   head=insert_end(head,20);
   head=insert_end(head,30);
-  printf("%d",head);
   head=del_end(head);
-  printf("%d",head);
   return head;
 }
