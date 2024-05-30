@@ -24,3 +24,22 @@ struct node* insert_beg(struct node* head,int data){
    head=temp1;
    return head;
 }
+struct node* insert_end(struct node* head,int data){
+   struct node* temp,*tp;
+   temp=malloc(sizeof(struct node));
+   temp1->prev=NULL;
+   temp1->data=data;
+   temp1->next=NULL;
+   tp=head;
+   while(tp->next!=NULL){
+       tp=tp->next;
+   }
+   tp->next=temp;
+   temp->Prev=tp;
+   
+  
+  
+   return head;
+}
+struct node* add_pos(struct node* head,int data,int pos){
+  
