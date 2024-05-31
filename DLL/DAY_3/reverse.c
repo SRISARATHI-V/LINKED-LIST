@@ -32,15 +32,15 @@ struct node* create(struct node* head, int data){
 struct node* insert_end(struct node* head,int data){
    struct node* temp,*tp;
    temp=malloc(sizeof(struct node));
-   temp1->prev=NULL;
-   temp1->data=data;
-   temp1->next=NULL;
+   temp->prev=NULL;
+   temp->data=data;
+   temp->next=NULL;
    tp=head;
    while(tp->next!=NULL){
        tp=tp->next;
    }
    tp->next=temp;
-   temp->Prev=tp;
+   temp->prev=tp;
    return head;
 }
 struct node* reverse(struct node* head){
