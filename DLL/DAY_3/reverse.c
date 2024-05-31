@@ -16,9 +16,7 @@ int main(){
   head=create(head,10);
   head=insert_end(head,20);
   head=insert_end(head,30);
-  print(head);
   head=reverse(head);
-  print(head);
   return0;
   
 }
