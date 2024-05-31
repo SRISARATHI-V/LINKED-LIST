@@ -39,5 +39,35 @@ struct node* del_end(struct node* head){
   free(temp);
   return head;
 }
+struct node* del_beg(struct node* head){
+  struct node* temp=head;
+  head=head->next;
+  free(temp);
+  temp=NULL;
+  head->prev=NULL;
+  return head;
+}
+struct node* del_pos(struct node* head,int position){
+   struct node* temp=head;
+   struct node* temp2=NULL;
+   if(position==1){
+     head=del_beg(head);
+   }
+   while(position>1){
+      temp=temp->next;
+      position--;
+   }
+   if(temp->next==NULL){
+     head=del_end(head);
+   }
+   else{
+     temp2=temp->prev;
+     temp2->next=temp->next;
+     temp->next->prev=temp2;
+     free(temp);
+     temp=NULL;
+   }
+   return head;
+}
   
 
