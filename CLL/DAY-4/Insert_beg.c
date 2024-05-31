@@ -5,7 +5,7 @@ struct node{
   int data;
   struct node* next;
 };
-struct node* creation(int data){
+struct node* create(int data){
   struct node* temp=malloc(sizeof(struct node));
   temp->data=data;
   temp->next=temp;
@@ -23,6 +23,6 @@ int main()
   struct node* tail;
   tail= create(10);
   tail= insert_beg(tail,20);
-  print(tail);
+  
   return 0;
 }
